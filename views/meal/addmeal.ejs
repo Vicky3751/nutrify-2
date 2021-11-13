@@ -1,0 +1,40 @@
+<%- include ('../_partial/_header'); -%>
+
+<div class="container border" style="margin: 50px auto; width: 40%; padding: 10px 10px">
+
+<div class="row container">
+    <div class="col-md-6">
+        <h1>New Meal</h1>
+    </div>
+</div>
+ 
+<div class="row container">
+    <div class="container">
+        <form action="/meals/addmeal" method="POST">
+            <div class="form-group container mt-3">
+ 
+                <label for="inputTitle">Title</label>
+                <input type="text" class="form-control" placeholder="Title" id="inputTitle" name="title">
+            </div>
+
+            <div class="form-group container mt-3">
+ 
+                <label for="inputTitle">Calories</label>
+                <input type="number" class="form-control" placeholder="Calories" id="inputTitle" name="calories">
+            </div>
+ 
+            <div class="form-group container mt-3">
+                <label for="inputContent">Description</label>
+                <textarea class="form-control" rows="3" id="inputContent" placeholder="Content" name="content"></textarea>
+            </div>
+ 
+            <div class="form-group container mt-3">
+                <button type="submit" class="btn btn-default border " href="#" role="button">Create</button>
+            </div>
+    </div>
+ 
+    </form>
+</div>
+</div>
+ 
+<%- include ('../_partial/_footer'); -%>

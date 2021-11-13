@@ -1,0 +1,52 @@
+<%- include ('../_partial/_header'); -%>
+
+
+    <div class="container border " style="margin: 50px auto; width: 100%; padding: 10px 10px ; ">
+        <div class="container" style="margin-bottom:10px; text-align: center;">
+            <h1>My MEAL LIST</h1>
+
+        </div>
+
+        <div class="container" style="margin-bottom:10px; text-align: center; ">
+            <a href="/meals/addmeal" type="button" class="btn btn-light mt-3" style="border:1px solid black">New
+                meal</a>
+        </div>
+
+    </div>
+
+    <hr class="container" style="margin-bottom:10px; text-align: center; ">
+
+    <!--List all the meals-->
+
+
+    <% meals.forEach(function(meal) { %>
+        <div class="container border " style="margin: 50px auto; width: 30%; padding: 10px 10px">
+            <div class="thumbnail">
+
+                <div class="container" style="margin-bottom:10px; text-align: center; ">
+                    <h3>
+                        <%= meal.title %>
+                    </h3>
+                    <h4>
+                        <%= meal.calories %>
+                    </h4>
+                    <p>
+                        <%= meal.content %>
+                    </p>
+                    <p><a href="meals/edit/<%= meal._id %>" class="btn btn-primary" role="button">Edit</a>
+                        <a href="meals/<%= meal._id %>" class="btn btn-light border" role="button">View</a>
+                        <a href="meals/delete/<%= meal._id %>" method="Delete" class="btn btn-light border"
+                            role="button">Delete</a>
+                    </p>
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <% }) %>
+
+
+
+            <%- include ('../_partial/_footer'); -%>
